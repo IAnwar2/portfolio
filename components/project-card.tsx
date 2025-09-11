@@ -132,7 +132,6 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
       description: 'Converted legacy VB6 codebase to modern .NET, for the terminal functionality used in Computer Aided Dispatch.',
       date: '2025-04-14',
       photo: '/images/CAD.png',
-      isExternal: true,
       link: '/omh'
     },
     {

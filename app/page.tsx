@@ -1,103 +1,90 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+} from "@/components/ui/breadcrumb";
+import { AppSidebar } from "@/components/app-sidebar";
+import TeamExperience from "@/components/experience-list";
+import SkillsSection from "@/components/skill-section";
+import ProjectGrid from "@/components/project-card";
+import { Home } from "lucide-react"; 
+import GravityGrid from "@/components/ui/gravity-grid";
+import LocationAndTimeDisplay from "@/components/location-indicator";
+import ResumeEmailButtons from "@/components/resume-email-btn";
+import Link from "next/link";
+import { Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+export default function HomePage() {
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <SidebarProvider>
+      <AppSidebar />
+      <main className="flex-1 "> {/* Added dotted background class: dotted-paper-bg-subtle*/}
+        {/* Top header with breadcrumb and mobile sidebar trigger */}
+        <div className="flex h-16 items-center justify-between px-4 lg:px-6 border-b border-neutral-800">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <Home className="w-3 h-3 mr-1" />
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="lg:hidden">
+            <SidebarTrigger />
+          </div>
         </div>
+
+        {/* Main Content */}
+        <div className="px-4 py-8 sm:px-6 lg:px-12 max-w-7xl mx-auto space-y-8">
+          <div className="mb-2">
+            {/* <Avatar className="w-15 h-15">
+              <AvatarImage src="/linkedin.jpg" alt="@shadcn" />
+              <AvatarFallback>VK</AvatarFallback>
+            </Avatar> */}
+          </div>
+          <div className="text-sm text-muted-foreground flex items-center gap-4 max-w-4xl">
+            <LocationAndTimeDisplay />
+          </div>
+
+          <div className="space-y-4 max-w-7xl">
+            <h3 className="max-w-4xl">
+              Thanks for visiting! I'm <span className="font-bold">Ishraq Anwar</span>, a 3rd year Mechatronics Engineering student at the University of Waterloo.
+              I'm passionate about embedded systems, software engineering, and ML. I love building innovative solutions that combine hardware and software to solve real-world problems.
+            </h3>
+              I have previously had the opportunity to intern at companies like <Link href="https://www.asc-csa.gc.ca/eng/" target="_blank" className="text-blue-400 underline hover:text-blue-500">The Canadian Space Agency</Link>, <Link href="https://www.curinos.com" target="_blank" className="text-blue-400 underline hover:text-blue-500">Curinos</Link>, and <Link href="https://www.ontario.ca/page/emergency-health-services" target="_blank" className="text-blue-400 underline hover:text-blue-500">Ontario Ministry of Health - Emergency Services</Link>, where I 
+              was able to contribute to impactful projects and gain hands-on experience in various fields. I'm currently seeking an eight month co-op for Winter/Summer 2026 (Jan - Aug) to further develop my skills and make meaningful contributions.
+            <h3>
+
+            </h3>
+            <div>
+              <div className=" text-sm flex items-center gap-2">
+                <div className="relative">
+                  <div
+                    className="w-2 h-2 rounded-full bg-green-400 animate-pulse"
+                    style={{
+                      filter: "drop-shadow(0 0 4px rgba(74, 222, 128, 0.6))",
+                    }}
+                  />
+                  <div className="absolute inset-0 w-2 h-2 rounded-full bg-green-400 animate-ping opacity-20" />
+                </div>
+                  Currently seeking <strong> Winter/Summer 2026 Engineering Internships (Jan - Aug)</strong>
+              </div>
+            </div>
+
+            <ResumeEmailButtons />
+            {/* <GravityGrid /> */}
+            <TeamExperience />
+            <SkillsSection />
+            <ProjectGrid fullWidthCount={1} />
+          </div>
+        </div>
+
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </SidebarProvider>
   );
 }

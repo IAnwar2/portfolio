@@ -3,7 +3,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 
-## Tech Stack
+## Stack
 
 - **Framework:** [Next.js](https://nextjs.org/) - React framework for production
 - **UI Components:** [shadcn/ui](https://ui.shadcn.com/) - UI components

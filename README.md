@@ -1,4 +1,4 @@
-# [ishraqanwar.ca] (http://portfolio-one-opal-99.vercel.app/)
+# [ishraqanwar.ca](http://portfolio-one-opal-99.vercel.app/)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
@@ -10,5 +10,5 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - **Custom UI:** [Tailwind CSS](https://tailwindcss.com/) - CSS framework
 - **Deployment:** [Vercel](https://vercel.com) - Site hosting
 
-## Credits: 
+## Credits
 A massive thank you to [Nuravar](https://varunram.ca) for inspiring a lot of the website. 

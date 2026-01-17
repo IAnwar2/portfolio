@@ -53,11 +53,11 @@ export default function HomePage() {
 
           <div className="space-y-4 max-w-7xl">
             <h3 className="max-w-4xl">
-              Thanks for visiting! I'm <span className="font-bold">Ishraq Anwar</span>, a 3rd year Mechatronics Engineering student at the University of Waterloo.
+              Thanks for visiting! I'm <span className="font-bold">Ishraq Anwar</span>, a 4th year Mechatronics Engineering student at the University of Waterloo.
               I'm passionate about embedded systems, software engineering, and ML. I love building innovative solutions that combine hardware and software to solve real-world problems.
             </h3>
               I have previously had the opportunity to intern at companies like <Link href="https://www.asc-csa.gc.ca/eng/" target="_blank" className="text-blue-400 underline hover:text-blue-500">The Canadian Space Agency</Link>, <Link href="https://www.curinos.com" target="_blank" className="text-blue-400 underline hover:text-blue-500">Curinos</Link>, and <Link href="https://www.ontario.ca/page/emergency-health-services" target="_blank" className="text-blue-400 underline hover:text-blue-500">Ontario Ministry of Health - Emergency Services</Link>, where I 
-              was able to contribute to impactful projects and gain hands-on experience in various fields. I'm currently seeking an eight month co-op for Winter/Summer 2026 (Jan - Aug) to further develop my skills and make meaningful contributions.
+              was able to contribute to impactful projects and gain hands-on experience in various fields. I'm currently seeking a four month co-op for Summer 2026 (May - Aug) to further develop my skills and make meaningful contributions.
             <h3>
 
             </h3>
@@ -72,7 +72,7 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 w-2 h-2 rounded-full bg-green-400 animate-ping opacity-20" />
                 </div>
-                  Currently seeking <strong> Winter/Summer 2026 Engineering Internships (Jan - Aug)</strong>
+                  Currently seeking <strong> Summer 2026 Engineering Internships (May - Aug)</strong>
               </div>
             </div>
 
